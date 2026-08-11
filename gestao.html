@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel de Gestão — Bar do Bastião</title>
+  <link rel="icon" href="assets/img/logo.svg">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/gestao.css">
+</head>
+<body>
+
+  <!-- LOGIN -->
+  <div class="gate" id="gate" style="display:none">
+    <div class="card">
+      <img src="assets/img/logo.svg" alt="Bar do Bastião">
+      <h1 class="tit">Painel de Gestão</h1>
+      <p>Área da equipe do Bar do Bastião</p>
+      <input id="gatePw" type="password" placeholder="Senha" autocomplete="current-password">
+      <div class="gateErr err" id="gateErr"></div>
+      <button id="gateBtn">Entrar</button>
+      <p style="margin-top:14px;font-size:12px;color:#a99">Senha inicial: <b>bastiao2025</b> (troque em Configurações)</p>
+    </div>
+  </div>
+
+  <!-- APP -->
+  <div class="app" id="app">
+    <aside class="side">
+      <div class="logo">
+        <img src="assets/img/logo.svg" alt="">
+        <div><b>BASTIÃO</b><br><span>Gestão</span></div>
+      </div>
+      <nav>
+        <button data-a="dashboard" class="on">📊 Visão geral</button>
+        <button data-a="cardapio">📋 Cardápio & Fichas</button>
+        <button data-a="estoque">📦 Estoque</button>
+        <button data-a="financeiro">💰 Financeiro</button>
+        <button data-a="config">⚙️ Configurações</button>
+      </nav>
+      <div class="bottom">
+        <a href="index.html" target="_blank">Ver cardápio online ↗</a><br><br>
+        <button id="logout" style="background:none;color:#a99;padding:0;font-size:12px">Sair do painel</button>
+      </div>
+    </aside>
+    <main class="main" id="content"></main>
+  </div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/gestao.js"></script>
+</body>
+</html>
